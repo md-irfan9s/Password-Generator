@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT46BN_uyTJATb_sNXd39w6DngzcaHzkaGZcphABvEY1A&s" type="image/x-icon">
+    
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Password Generator</h1>
+
+        <div class="display-container">
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+            <button class="copybtn" data-copy>
+                <span class="tooltip" data-copyMsg></span>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAADtklEQVR4Xu2dTU4bQRCFu8fWIBax8A3gBhzBPkGSG8AuCo5CTkByghDFRNmRI/gGcIP4BnADO2ZhYTwMM4tIyLLdP6962mM/b92vquZ9XT2DCo214ieqAzpqdiZXBBB5ExAAAUR2IHJ6dgABRHYgcnp2wK4D6E1HHaWSjkqSt0rlh4UfB5E9cU0/zpUaJ1oPnrL5j9/77XuXANE64DwfHWRPzYs8z09qaPpKj7XWlz/TN19sIUQBUJo/nzWuiyLf2RZaq3Va3fbTVtem5igAPs0evhc7/9ymwBqvGfT3Wu9N9VcO4ONsdJzkjZttOnZWmTx/zo5M94TKAfSm/76qRF+YdsY2fJ9r9ecqbZ2uu5bKAZw9Tu6KpOXTzi58xsUx1CaAiKgLAGs3eeUd0HucFI/Nqz+mgiN6uTQ1ej0EABIlANBAVE4AqIOgngBAA1E5AaAOgnoCAA1E5QSAOgjqawcAvN6NkxNAZCQEQACRHYicvvIO2PUZ7iLvygBwhru81SoBwBnu6nOuEgCc4UYEwBnu+rt88A7gDDcyAM5wCaDSJ33XkWj4I4gz3LUbgAAc+wM1rPI/xKQLdvRLfLn09aDxjP8VgSYQdxAMKH09aDwCWADKmzC4w01ydMfyHmBy2PA9AYAGonICQB0E9QQAGojKCQB1ENQTAGggKicA1EFQTwCggaicAFAHQT0BgAaicgJAHQT1BAAaiMoJAHUQ1BMAaCAqJwDUQVBPAKCBqJwAUAdBPQGABqJyAkAdBPWuAEzrTeWYZswcyi84uGgYAqB4K8n91V7raB0kAggIoAhtfG0ZAYQE8Jx1+/vtW3bAKwdMR4rUEWTzurKyLHZAkA7Qw2Y6717q9th0kyYAeQCDZpqd2pjPDliyPX2OoPJpp9jJw2edffuVtoemXf/6e3aAoQNczPRZSwAE4LNv/DWuT0H+meyU7AB2gN1OkVrFDpBy0jMOAXgaJyUjACknPeMQgKdxUjICkHLSMw4BeBonJSMAKSc949QRwKi41rr9tpcnHqVMM1zvwCuEFn8JP/wtfmDtWDrxJsazmeFK120EsCOvK/vvq3GGWzmAD9PRYTNp3Ekn3sh4FjNc6bqNHVAmPJtNrnWuTqSTb1I82xmudM1WAMqkvdnkRuWqI13AZsSzn+FK12sNYIs7wWmGGxVAmbx8jaVWjc9lN9T1B9mQGW50ANIF7Ho8pyNo180Kcf0EEMJVh5gE4GBWiKUEEMJVh5gE4GBWiKUEEMJVh5gE4GBWiKUvtcUcjhAgRl4AAAAASUVORK5CYII=" alt=""
+                height="24" width="24">
+            </button>
+        </div>
+
+        <div class="input-container">
+
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+
+            <input type="range" min="1" max="20" step="1" class="slider" data-lengthslider>
+
+            <!-- checkboxes -->
+
+            <div class = "check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+
+            <div class = "check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+                
+
+            <div class = "check">
+                <input type="checkbox" id="number">
+                <label for="number">Include Numbers</label>
+            </div>
+
+            <div class = "check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+            
+            <!-- checkboxes end -->
+            <div class="Strength-container">
+                <p>Strength</p>
+                <div class="indicator" data-indicator></div>
+            </div>
+
+            <button class="generatePassword">Generate Password</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
